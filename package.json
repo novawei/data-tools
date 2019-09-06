@@ -1,0 +1,26 @@
+{
+  "name": "@novawei/data-tools",
+  "version": "1.0.0",
+  "description": "tools with async/await wrap, simply use for writing sync script",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/novawei/data-tools.git"
+  },
+  "keywords": [
+    "mysql",
+    "sqlite",
+    "request",
+    "sleep",
+    "xlsx"
+  ],
+  "author": "novawei",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/novawei/data-tools/issues"
+  },
+  "homepage": "https://github.com/novawei/data-tools#readme"
+}
