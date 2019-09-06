@@ -22,5 +22,13 @@
   "bugs": {
     "url": "https://github.com/novawei/data-tools/issues"
   },
-  "homepage": "https://github.com/novawei/data-tools#readme"
+  "homepage": "https://github.com/novawei/data-tools#readme",
+  "dependencies": {
+    "excel-export": "^0.5.1",
+    "fdfs": "^1.0.4",
+    "mysql": "^2.17.1",
+    "request": "^2.88.0",
+    "sqlite3": "^4.1.0",
+    "xlsx-extractor": "^1.4.1"
+  }
 }
