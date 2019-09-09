@@ -111,7 +111,7 @@ async function fetcherExample() {
     'User-Agent': 'Mozilla/5.0 (iPhone; U; CPU like Mac OS X; en) AppleWebKit/420+ (KHTML, like Gecko) Version/3.0 Mobile/1C28 Safari/419.3'
   })
 
-  const result = fetcher.fetch('http://url')
+  const result = await fetcher.fetch('http://url')
   console.log(result) // response body
 }
 ```
@@ -125,7 +125,7 @@ async function fetcherExample() {
     'User-Agent': 'Mozilla/5.0 (iPhone; U; CPU like Mac OS X; en) AppleWebKit/420+ (KHTML, like Gecko) Version/3.0 Mobile/1C28 Safari/419.3'
   })
 
-  const result = fetcher.download('http://url', '/path/to/save/file')
+  const result = await fetcher.download('http://url', '/path/to/save/file')
   console.log(result) // true or false 
 }
 ```
