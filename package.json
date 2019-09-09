@@ -1,6 +1,6 @@
 {
   "name": "@novawei/data-tools",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "tools with async/await wrap, simply use for writing sync script",
   "main": "index.js",
   "scripts": {
