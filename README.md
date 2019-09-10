@@ -117,6 +117,14 @@ async function fetcherExample() {
 ```
 
 ### download file
+`async download(url, filename = undefined, dirpath = './download', method = 'GET', config = { resolveFileExt, resolveFilePath })`
+
+if filename is empty or undefined, data will pipe to a temp file, after download completed `download` will execute `resolveFilePath`(try to resolve filename with 'Content-Type' and 'Content-Disposition').
+
+if filename is not empty and without extension, `download` will execute `resolveFileExt`(try to append extension)
+
+if filename is not empty and has extension, `dirpath + filename` will be final target path.
+
 ```javascript
 const { Fetcher } = require('@novawei/data-tools')
 
@@ -125,7 +133,8 @@ async function fetcherExample() {
     'User-Agent': 'Mozilla/5.0 (iPhone; U; CPU like Mac OS X; en) AppleWebKit/420+ (KHTML, like Gecko) Version/3.0 Mobile/1C28 Safari/419.3'
   })
 
-  const result = await fetcher.download('http://url', '/path/to/save/file')
+  const result = await fetcher.download('http://url')
+  // const result = await fetcher.download('http://url', 'test.jpg', './download/img')
   console.log(result) // true or false 
 }
 ```
