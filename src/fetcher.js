@@ -2,7 +2,7 @@ const fs = require('fs')
 const path = require('path')
 const request = require('request')
 const uuid = require('uuid')
-const { parseFileInfo, resolveFilePath, resolveFileExt } = require('./utils')
+const { resolveFilePath, resolveFileExt } = require('./utils')
 
 class Fetcher {
   constructor(headers) {
