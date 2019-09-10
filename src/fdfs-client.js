@@ -4,7 +4,7 @@ function slientlogger() {}
 slientlogger.prototype.log = function() {}
 
 class FdfsClient {
-  
+
   constructor(host, port = 22122) {
     this.cnf = {
       trackers: [{
