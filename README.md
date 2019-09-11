@@ -34,7 +34,7 @@ async function mysqlExample() {
   const client = new MySqlClient('127.0.0.1', 'root', '123456', 'myapp')
   const conn = client.getConnection()
   for (let i = 0; i < 10; i++) {
-    let results = await client.run('INSERT INTO `t_user` VALUES(?, ?)', [i, `user_${i}`])
+    let results = await client.exec(conn, 'INSERT INTO `t_user` VALUES(?, ?)', [i, `user_${i}`])
     console.log(results)
   }
   client.endConnection(conn)
