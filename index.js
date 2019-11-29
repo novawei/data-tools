@@ -13,3 +13,11 @@ module.exports = {
   sleep,
   xlsx
 }
+
+async function test() {
+  const fetcher = new Fetcher()
+  await fetcher.download('https://www.cloud-learn.com/group1/M00/00/C3/rB-YnV0CBECAa4VyAAEFvIqCAis023.png')
+  console.log('hhh')
+}
+
+// test()

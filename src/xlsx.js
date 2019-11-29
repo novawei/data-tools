@@ -33,7 +33,7 @@ function __writeXlsx(filepath, cols, rows) {
       if (fs.existsSync(filepath)) {
         fs.unlinkSync(filepath)
       }
-      fs.writeFileSync(filepath, result, 'binary', (error) => {
+      fs.writeFile(filepath, result, 'binary', (error) => {
         if (error) {
           reject(error)
         } else {
