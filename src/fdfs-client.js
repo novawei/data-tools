@@ -38,6 +38,28 @@ class FdfsClient {
       })
     })
   }
+
+  async remove(filepath) {
+    const index = filepath.indexOf('group')
+    if (index > 0) {
+      filepath = filepath.substring(index)
+    }
+    try {
+      await this.__remove(filepath)
+    } catch(error) {
+      console.error(error)
+    }
+  }
+
+  __remove(filepath) {
+    return new Promise((resolve, reject) => {
+      this.client.del(filepath).then(() => {
+        resolve()
+      }).catch(err => {
+        reject(err)
+      })
+    })
+  }
 }
 
 module.exports = FdfsClient
